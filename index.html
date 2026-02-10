@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio - FSD Lab</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .section-header {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        table {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Aditya's Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#academics">Academics</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Projects</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Web Dev</a></li>
+                            <li><a class="dropdown-item" href="#">App Dev</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="container-fluid text-white text-center d-flex align-items-center justify-content-center" style="height: 60vh;">
+        <div>
+            <h1 class="display-3 fw-bold">Welcome to My Website</h1>
+            <p style="font-size: 1.5rem; background-color: rgba(0,0,0,0.5); padding: 5px; border-radius: 5px;">Third Year CSE Student @ MIT WPU</p>
+        </div>
+    </header>
+
+    <div class="container mt-5">
+        <div id="about" class="row align-items-center">
+            <div class="col-md-4 text-center">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile" class="img-fluid rounded-circle border border-primary p-2" width="250">
+            </div>
+            <div class="col-md-8">
+                <h2 class="section-header">About Me</h2>
+                <p class="lead">Hello! I am Aditya, a passionate Computer Science student interested in Full Stack Development, Data Science, and Cloud Computing.</p>
+                <p>I enjoy solving algorithmic problems and building responsive web applications using modern frameworks.</p>
+                
+                <h4>Technical Skills:</h4>
+                <ul>
+                    <li><strong>Languages:</strong> Java, Python, C++</li>
+                    <li><strong>Web:</strong> HTML5, CSS3, Bootstrap, JavaScript</li>
+                    <li><strong>Tools:</strong> Git, GitHub, VS Code</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="my-5">
+
+        <div id="academics" class="row">
+            <div class="col-12">
+                <h2 class="section-header">Academic Details</h2>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover shadow-sm">
+                        <thead class="table-primary">
+                            <tr>
+                                <th>Qualification</th>
+                                <th>School/College</th>
+                                <th>Year</th>
+                                <th>Grade/Percentage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>B.Tech CSE</td>
+                                <td>MIT WPU, Pune</td>
+                                <td>2023-2027</td>
+                                <td>9.2 CGPA</td>
+                            </tr>
+                            <tr>
+                                <td>HSC (12th)</td>
+                                <td>SNBP International</td>
+                                <td>2023</td>
+                                <td>89%</td>
+                            </tr>
+                            <tr>
+                                <td>SSC (10th)</td>
+                                <td>DAV Public School</td>
+                                <td>2021</td>
+                                <td>94%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5">
+
+        <div id="contact" class="row mb-5">
+            <div class="col-md-6">
+                <h2 class="section-header">Contact Me</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                </form>
+            </div>
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center bg-light p-4 rounded">
+                <h3>Connect with me</h3>
+                <p>Check out my projects and repositories:</p>
+                <a href="https://github.com/" target="_blank" class="btn btn-dark btn-lg">
+                    <i class="bi bi-github"></i> Visit My GitHub
+                </a>
+                <small class="text-muted mt-2">(Opens in a new tab)</small>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center p-3 mt-4">
+        <p class="m-0">&copy; 2026 Aditya Zarekar. Designed for FSD Lab.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
