@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3: Validation & DOM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><i class="fas fa-id-card"></i> FSD Lab 3</a>
+            <a href="index.html" class="btn btn-outline-light btn-sm">Back to Portfolio</a>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        
+        <div class="row mb-5">
+            <div class="col-12">
+                <h3 class="border-bottom pb-2 mb-4 text-primary">1. Interactive Profile Generator</h3>
+                <p class="text-muted">Use the controls on the left to manipulate the Profile Card on the right (Demonstrates DOM & jQuery).</p>
+            </div>
+
+            <div class="col-md-5">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-secondary text-white">Customization Controls</div>
+                    <div class="card-body">
+                        
+                        <div class="mb-4">
+                            <label class="fw-bold">Avatar:</label>
+                            <button onclick="changeAvatar()" class="btn btn-sm btn-primary float-end">
+                                <i class="fas fa-sync-alt"></i> Switch Avatar
+                            </button>
+                            <small class="d-block text-muted">Changes image 'src' attribute.</small>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="fw-bold">Card Theme:</label>
+                            <button onclick="toggleTheme()" class="btn btn-sm btn-success float-end">
+                                <i class="fas fa-palette"></i> Toggle Theme
+                            </button>
+                            <small class="d-block text-muted">Changes CSS (Color, Radius, Shadow).</small>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="fw-bold">Skills (Node Ops):</label>
+                            <div class="input-group mt-2">
+                                <input type="text" id="skill-input" class="form-control form-control-sm" placeholder="e.g. Java">
+                                <button onclick="addSkill()" class="btn btn-info btn-sm text-white">Add</button>
+                                <button onclick="removeSkill()" class="btn btn-danger btn-sm">Del</button>
+                            </div>
+                        </div>
+
+                         <div class="mb-2">
+                            <label class="fw-bold">Action (jQuery):</label>
+                            <button id="jq-btn" class="btn btn-warning btn-sm w-100 mt-2 text-dark fw-bold">
+                                Hire Me
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-7 d-flex justify-content-center align-items-center">
+                <div id="card-container" class="profile-card theme-pro p-4 text-center" style="width: 350px;">
+                    <img id="avatar-img" src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" alt="Avatar" class="rounded-circle mb-3 border" width="120" height="120">
+                    
+                    <h3 id="card-name">Aditya Zarekar</h3>
+                    <p class="text-muted" id="card-role">Full Stack Developer</p>
+                    
+                    <hr>
+                    
+                    <div class="text-start">
+                        <h6>Skills:</h6>
+                        <div id="skills-list">
+                            <span class="badge bg-secondary skill-badge">HTML</span>
+                            <span class="badge bg-secondary skill-badge">CSS</span>
+                        </div>
+                    </div>
+
+                    <div id="status-msg" class="mt-3 alert alert-success" style="display:none;">
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-12">
+                <h3 class="border-bottom pb-2 mb-4 text-primary">2. Student Registration Form</h3>
+            </div>
+            <div class="col-md-8 mx-auto">
+                <div class="card shadow-lg border-top border-primary border-4">
+                    <div class="card-body p-4">
+                        <form id="regForm" onsubmit="return validateForm()">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Username</label>
+                                    <input type="text" class="form-control" id="username">
+                                    <small id="user-err" class="error-msg">Username is required.</small>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Phone</label>
+                                    <input type="text" class="form-control" id="phone">
+                                    <small id="phone-err" class="error-msg">Must be 10 digits only.</small>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="text" class="form-control" id="email">
+                                <small id="email-err" class="error-msg">Invalid format (e.g. abc@xyz.co).</small>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="password">
+                                    <small id="pass-err" class="error-msg">Min 7 chars, 1 Upper, 1 Special.</small>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Confirm Password</label>
+                                    <input type="password" class="form-control" id="cpassword">
+                                    <small id="cpass-err" class="error-msg">Passwords do not match.</small>
+                                </div>
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">Register Student</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

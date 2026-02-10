@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Zarekar - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Aditya Zarekar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#academics">Academics</a></li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Projects</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#web-projects">Web Development</a></li>
+                            <li><a class="dropdown-item" href="#app-projects">ML & AI Projects</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="validation.html" target="_blank">Lab 3: Form Validation</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="container-fluid text-white text-center d-flex align-items-center justify-content-center">
+        <div class="bg-dark bg-opacity-50 p-5 rounded">
+            <h1 class="display-3 fw-bold">Welcome to My Portfolio</h1>
+            <p class="lead">Third Year CSE Student @ MIT WPU</p>
+            <a href="#contact" class="btn btn-primary btn-lg mt-3">Get in Touch</a>
+        </div>
+    </header>
+
+    <div class="container mt-5">
+        <div id="about" class="row align-items-center mb-5">
+            <div class="col-md-4 text-center">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile" class="img-fluid rounded-circle border border-primary p-2" width="250">
+            </div>
+            <div class="col-md-8">
+                <h2 class="text-primary border-bottom pb-2">About Me</h2>
+                <p class="lead">I am a passionate Computer Science student specializing in AI/ML and Full Stack Development.</p>
+                <p>My current focus is on building scalable web applications and exploring Deep Learning models for real-world problems like traffic management and financial analysis.</p>
+                
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <h5><i class="fas fa-code"></i> Skills</h5>
+                        <ul>
+                            <li>Java, Python, C++</li>
+                            <li>HTML, CSS, Bootstrap, JavaScript</li>
+                            <li>Git, GitHub, VS Code</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h5><i class="fas fa-briefcase"></i> Experience</h5>
+                        <ul>
+                            <li>L&T National Immersion Training (Chennai)</li>
+                            <li>Intern at Unique Skill Development Centre</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="academics" class="row mb-5">
+            <div class="col-12">
+                <h2 class="text-primary border-bottom pb-2">Academic Details</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover shadow-sm">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Qualification</th>
+                                <th>Institution</th>
+                                <th>Year</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>B.Tech CSE</td>
+                                <td>MIT WPU, Pune</td>
+                                <td>2023-2027</td>
+                                <td>9.2 CGPA</td>
+                            </tr>
+                            <tr>
+                                <td>12th Grade (HSC)</td>
+                                <td>SNBP International</td>
+                                <td>2023</td>
+                                <td>89%</td>
+                            </tr>
+                            <tr>
+                                <td>10th Grade (SSC)</td>
+                                <td>DAV Public School</td>
+                                <td>2021</td>
+                                <td>94%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="web-projects" class="mb-5 pt-4">
+            <h2 class="text-primary border-bottom pb-2">Web Development Projects</h2>
+            <div class="row g-4 mt-2">
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Portfolio Website</h5>
+                            <p class="card-text">A responsive personal portfolio website built using HTML5, CSS3, and Bootstrap. Features a mobile-friendly grid layout and interactive elements.</p>
+                            <span class="badge bg-primary">HTML</span> <span class="badge bg-info text-dark">CSS</span> <span class="badge bg-dark">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Student Registration System</h5>
+                            <p class="card-text">A form-based web application that validates user input (email regex, password strength) using JavaScript and updates the DOM dynamically.</p>
+                            <span class="badge bg-warning text-dark">JavaScript</span> <span class="badge bg-success">DOM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="app-projects" class="mb-5 pt-4">
+            <h2 class="text-primary border-bottom pb-2">ML & App Projects</h2>
+            <div class="row g-4 mt-2">
+                
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm border-start border-4 border-success">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">World Top Companies Analysis</h5>
+                            <p class="card-text">An AI-powered financial analytics platform featuring a 3D interactive dashboard. It analyzes global market data to predict high-growth stocks using regression models.</p>
+                            <span class="badge bg-success">Python</span> 
+                            <span class="badge bg-info text-dark">Data Science</span>
+                            <span class="badge bg-warning text-dark">3D Viz</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Smart AI Traffic Management</h5>
+                            <p class="card-text">An AI system designed to optimize traffic flow and reduce congestion using computer vision algorithms to adjust signal timings in real-time.</p>
+                            <span class="badge bg-danger">Python</span> <span class="badge bg-secondary">OpenCV</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Sentiment Analysis Detector</h5>
+                            <p class="card-text">A Natural Language Processing (NLP) model that detects emotions (happy, sad, neutral) from customer feedback and social media text.</p>
+                            <span class="badge bg-danger">Python</span> <span class="badge bg-info">NLP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Text-to-Sign Language Model</h5>
+                            <p class="card-text">An accessibility tool that converts text input into animated sign language gestures to assist communication for the hearing impaired.</p>
+                            <span class="badge bg-dark">Deep Learning</span> <span class="badge bg-warning text-dark">TensorFlow</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="contact" class="row mb-5 pt-4">
+            <div class="col-md-8 mx-auto text-center">
+                <h2>Contact Me</h2>
+                <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+                <div class="d-flex justify-content-center gap-3 mt-3">
+                    <a href="#" class="btn btn-outline-dark"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#" class="btn btn-outline-primary"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="mailto:aditya@example.com" class="btn btn-outline-danger"><i class="fas fa-envelope"></i> Email</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+        <p class="m-0">&copy; 2026 Aditya Zarekar. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
