@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 40px 0;
+        }
+        h1 {
+            color: white;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-title {
+            color: #4a4a8a;
+            font-weight: 600;
+        }
+        .card-subtitle {
+            font-size: 0.85rem;
+        }
+        .btn-danger {
+            border-radius: 8px;
+        }
+        .btn-info {
+            border-radius: 8px;
+            color: white;
+        }
+        .nav-links {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .nav-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        .empty-state {
+            text-align: center;
+            color: white;
+            padding: 60px 20px;
+            opacity: 0.8;
+        }
+        .empty-state h3 {
+            margin-bottom: 15px;
+        }
+        .modal-content {
+            border-radius: 15px;
+        }
+        .modal-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 15px 15px 0 0;
+        }
+        .modal-header .btn-close {
+            filter: invert(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-links">
+            <a href="/">🏠 Home</a>
+            <a href="/new-book.html">➕ Add New Book</a>
+        </div>
+
+        <h1>📖 List of Books</h1>
+        <hr style="border-color: rgba(255,255,255,0.3);">
+
+        <div class="row" id="books">
+            <!-- Books will be loaded here dynamically -->
+        </div>
+    </div>
+
+    <!-- Edit Book Modal -->
+    <div class="modal fade" id="editBookModal" tabindex="-1" aria-labelledby="editBookModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editBookModalLabel">✏️ Edit Book</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editForm" method="POST">
+                        <div class="mb-3">
+                            <label for="edit_isbn" class="form-label">ISBN</label>
+                            <input type="text" class="form-control" name="isbn" id="edit_isbn">
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit_title" class="form-label">Title</label>
+                            <input type="text" class="form-control" name="title" id="edit_title">
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit_author" class="form-label">Author</label>
+                            <input type="text" class="form-control" name="author" id="edit_author">
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit_publish_date" class="form-label">Published Date</label>
+                            <input type="date" class="form-control" name="publish_date" id="edit_publish_date">
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit_publisher" class="form-label">Publisher</label>
+                            <input type="text" class="form-control" name="publisher" id="edit_publisher">
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit_numOfPages" class="form-label">Number of Pages</label>
+                            <input type="number" class="form-control" name="numOfPages" id="edit_numOfPages">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Update Book</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="book-list.js"></script>
+</body>
+</html>

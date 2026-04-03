@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Book</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .form-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 550px;
+        }
+        .form-card h1 {
+            color: #4a4a8a;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border: none;
+            padding: 12px;
+            font-size: 1.1rem;
+            border-radius: 10px;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #5a6fd6, #6a4198);
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: #764ba2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-card mx-auto">
+            <h1>📚 Add New Book</h1>
+            <hr>
+            <form action="http://localhost:3000/book" method="POST">
+                <div class="mb-3">
+                    <label for="isbn" class="form-label">ISBN</label>
+                    <input type="text" class="form-control" name="isbn" id="isbn" placeholder="e.g. 9781593275846" required>
+                </div>
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" class="form-control" name="title" id="title" placeholder="e.g. Eloquent JavaScript" required>
+                </div>
+                <div class="mb-3">
+                    <label for="author" class="form-label">Author</label>
+                    <input type="text" class="form-control" name="author" id="author" placeholder="e.g. Marijn Haverbeke" required>
+                </div>
+                <div class="mb-3">
+                    <label for="publish_date" class="form-label">Published Date</label>
+                    <input type="date" class="form-control" name="publish_date" id="publish_date" required>
+                </div>
+                <div class="mb-3">
+                    <label for="publisher" class="form-label">Publisher</label>
+                    <input type="text" class="form-control" name="publisher" id="publisher" placeholder="e.g. No Starch Press" required>
+                </div>
+                <div class="mb-3">
+                    <label for="numOfPages" class="form-label">Number of Pages</label>
+                    <input type="number" class="form-control" name="numOfPages" id="numOfPages" placeholder="e.g. 472" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Submit</button>
+                <a href="/" class="back-link">← Back to Home</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
